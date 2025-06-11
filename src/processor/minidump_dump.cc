@@ -37,7 +37,14 @@
 
 #include <stdio.h>
 #include <string.h>
+
+#if 1
+#include <io.h>
+#include <process.h>
+#include "getopt.h"
+#else
 #include <unistd.h>
+#endif
 
 #include "common/path_helper.h"
 #include "common/scoped_ptr.h"

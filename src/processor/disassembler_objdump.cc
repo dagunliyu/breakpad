@@ -36,8 +36,18 @@
 
 #include "processor/disassembler_objdump.h"
 
-#include <unistd.h>
+#if 1
+#include <io.h>
+#include <process.h>
+#include "getopt.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+//#include <unistd.h>
+#else
 #include <sys/wait.h>
+#include <unistd.h>
+#endif
 
 #include <array>
 #include <fstream>
